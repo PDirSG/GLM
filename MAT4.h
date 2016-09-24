@@ -3,10 +3,12 @@
 
 typedef float MAT4[4 * 4];
 
-void identityMatrix(MAT4 matrix)
+float *identityMatrix(void)
 {
+	static MAT4 matrix;
+
 	for(int X = 0; X < 4; X++)
-	{
+	{	
 		for(int Y = 0; Y < 4; Y++)
 		{	
 			if(X == Y)
@@ -14,58 +16,47 @@ void identityMatrix(MAT4 matrix)
 				matrix[(X * 4) + Y] = 1;
 			}
 			else
-			{		
-				matrix[(X * 4) + Y] = 0;
+			{	
+				matrix[(X * 4) + Y] = 0;		
 			}		
-		}
+		}		
 	}
+
+	return matrix;
 }
 
 void translateMatrix(MAT4 matrix, float X, float Y, float Z) 
 {
-	matrix[03] = matrix[03] + X;
-	matrix[07] = matrix[07] + Y;
+	matrix[ 3] = matrix[ 3] + X;
+	matrix[ 7] = matrix[ 7] + Y;
 	matrix[11] = matrix[11] + Z;
 }
 
 void scaleMatrix(MAT4 matrix, float X, float Y, float Z)
 {
-	matrix[00] = matrix[00] + X;
-	matrix[05] = matrix[05] + Y;
+	matrix[ 0] = matrix[ 0] + X;
+	matrix[ 5] = matrix[ 5] + Y;
 	matrix[10] = matrix[10] + Z;	
 }
 
 #	define RADIANS(DEGREES) DEGREES * (PI/180)
 #	define DEGREES(RADIANS) RADIANS * (180/PI)
 
-void clearRotationMatrix(MAT4 rotationMatrix)
+
+void rotateMatrixX(MAT4 matrix, float angle)
 {
-	for(int I = 0; I < 16; I++)
-		rotationMatrix[I] = 0;
+	//...
 }
 
-float *rotationMatrixX(float angle)
+void rotateMatrixY(MAT4 matrix, float angle)
 {
-	static MAT4 rotationMatrixX; clearRotationMatrix(rotationMatrixX);
 	//...
-
-	return rotationMatrixX;
 }
 
-float *rotationMatrixY(float angle)
+void rotateMatrixZ(MAT4 matrix, float angle)
 {
-	static MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
 	//...
-	
-	return rotationMatrixY;
-}
 
-float *rotationMatrixZ(float angle)
-{
-	static MAT4 rotationMatrixZ; clearRotationMatrix(rotationMatrixZ);
-	//...
-	
-	return rotationMatrixZ;
 }
 
 #endif
