@@ -48,18 +48,24 @@ float *rotationMatrixX(float angle)
 {
 	MAT4 rotationMatrixX; clearRotationMatrix(rotationMatrixX);
 	//...
+
+	return rotationMatrixX;
 }
 
 float *rotationMatrixY(float angle)
 {
 	MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
 	//...
+	
+	return rotationMatrixY;
 }
 
 float *rotationMatrixZ(float angle)
 {
-	MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
+	MAT4 rotationMatrixZ; clearRotationMatrix(rotationMatrixZ);
 	//...
+	
+	return rotationMatrixZ;
 }
 
 #endif
