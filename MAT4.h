@@ -58,4 +58,31 @@ void rotateMatrixZ(MAT4 matrix, float angle)
 	//...
 }
 
+
+float *ortographicMatrix(float left, float right, float bottom, float top)
+{
+	static MAT4 matrix;
+
+	for(int I = 0; I < 16; I++)
+		matrix[I] = 0;
+	
+
+	//...
+
+	return matrix;
+}
+
+float *perspectiveMatrix(/*...*/)
+{
+	static MAT4 matrix;
+
+	for(int I = 0; I < 16; I++)
+		matrix[I] = 0;
+	
+
+	//...
+
+	return matrix;
+}
+
 #endif
