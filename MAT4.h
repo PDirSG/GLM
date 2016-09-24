@@ -5,11 +5,19 @@ typedef float MAT4[4][4];
 
 void identityMatrix(MAT4 matrix)
 {
-	memset(matrix, 0, sizeof(matrix[0][0]) * 4 * 4);
-	
-	for(int I = 0; I < 4; I++)
+	for(int X = 0; X < 4; X++)
 	{
-		matrix[I][I] = 1;
+		for(int Y = 0; Y < 4; Y++)
+		{	
+			if(X == Y)
+			{
+				matrix[X][Y] = 1;
+			}
+			else
+			{		
+				matrix[X][Y] = 0;
+			}		
+		}
 	}
 }
 
