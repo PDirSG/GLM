@@ -56,7 +56,6 @@ void rotateMatrixY(MAT4 matrix, float angle)
 void rotateMatrixZ(MAT4 matrix, float angle)
 {
 	//...
-
 }
 
 #endif
