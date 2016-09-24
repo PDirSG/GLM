@@ -21,4 +21,11 @@ void identityMatrix(MAT4 matrix)
 	}
 }
 
+void translateMatrix(MAT4 matrix, float X, float Y, float Z) 
+{
+	matrix[03] = matrix[03] + X;
+	matrix[07] = matrix[07] + Y;
+	matrix[11] = matrix[11] + Z;
+}
+
 #endif
