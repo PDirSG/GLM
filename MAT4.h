@@ -38,6 +38,28 @@ void scaleMatrix(MAT4 matrix, float X, float Y, float Z)
 #	define RADIANS(DEGREES) DEGREES * (PI/180)
 #	define DEGREES(RADIANS) RADIANS * (180/PI)
 
-//...
+void clearRotationMatrix(MAT4 rotationMatrix)
+{
+	for(int I = 0; I < 16; I++)
+		rotationMatrix[I] = 0;
+}
+
+float *rotationMatrixX(float angle)
+{
+	MAT4 rotationMatrixX; clearRotationMatrix(rotationMatrixX);
+	//...
+}
+
+float *rotationMatrixY(float angle)
+{
+	MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
+	//...
+}
+
+float *rotationMatrixZ(float angle)
+{
+	MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
+	//...
+}
 
 #endif
