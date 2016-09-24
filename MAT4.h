@@ -35,4 +35,9 @@ void scaleMatrix(MAT4 matrix, float X, float Y, float Z)
 	matrix[10] = matrix[10] + Z;	
 }
 
+#	define RADIANS(DEGREES) DEGREES * (PI/180)
+#	define DEGREES(RADIANS) RADIANS * (180/PI)
+
+//...
+
 #endif
