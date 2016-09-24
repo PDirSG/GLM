@@ -46,7 +46,7 @@ void clearRotationMatrix(MAT4 rotationMatrix)
 
 float *rotationMatrixX(float angle)
 {
-	MAT4 rotationMatrixX; clearRotationMatrix(rotationMatrixX);
+	static MAT4 rotationMatrixX; clearRotationMatrix(rotationMatrixX);
 	//...
 
 	return rotationMatrixX;
@@ -54,7 +54,7 @@ float *rotationMatrixX(float angle)
 
 float *rotationMatrixY(float angle)
 {
-	MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
+	static MAT4 rotationMatrixY; clearRotationMatrix(rotationMatrixY);
 	//...
 	
 	return rotationMatrixY;
@@ -62,7 +62,7 @@ float *rotationMatrixY(float angle)
 
 float *rotationMatrixZ(float angle)
 {
-	MAT4 rotationMatrixZ; clearRotationMatrix(rotationMatrixZ);
+	static MAT4 rotationMatrixZ; clearRotationMatrix(rotationMatrixZ);
 	//...
 	
 	return rotationMatrixZ;
