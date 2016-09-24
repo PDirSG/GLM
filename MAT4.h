@@ -28,4 +28,11 @@ void translateMatrix(MAT4 matrix, float X, float Y, float Z)
 	matrix[11] = matrix[11] + Z;
 }
 
+void scaleMatrix(MAT4 matrix, float X, float Y, float Z)
+{
+	matrix[00] = matrix[00] + X;
+	matrix[05] = matrix[05] + Y;
+	matrix[10] = matrix[10] + Z;	
+}
+
 #endif
