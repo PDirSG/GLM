@@ -1,7 +1,7 @@
 #ifndef __GLM_MAT4__
 #    define __GLM_MAT4__
 
-typedef float MAT4[4][4];
+typedef float MAT4[4 * 4];
 
 void identityMatrix(MAT4 matrix)
 {
@@ -11,11 +11,11 @@ void identityMatrix(MAT4 matrix)
 		{	
 			if(X == Y)
 			{
-				matrix[X][Y] = 1;
+				matrix[(X * 4) + Y] = 1;
 			}
 			else
 			{		
-				matrix[X][Y] = 0;
+				matrix[(X * 4) + Y] = 0;
 			}		
 		}
 	}
