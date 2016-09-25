@@ -1,5 +1,5 @@
-#ifndef __GLM_H__
-#    define __GLM_H__
+#ifndef __LA_H__
+#    define __LA_H__
 
 #    include <math.h>
 
@@ -9,7 +9,7 @@ typedef float VEC4[4];
 
 typedef float MAT4[4 * 4];
 
+#    include "VECN.h"
 #    include "MAT4.h"
-//...
 
 #endif
