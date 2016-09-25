@@ -1,8 +1,6 @@
 #ifndef __GLM_MAT4__
 #    define __GLM_MAT4__
 
-typedef float MAT4[4 * 4];
-
 float *identityMatrix(void)
 {
 	static MAT4 matrix;
