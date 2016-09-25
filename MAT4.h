@@ -1,5 +1,5 @@
-#ifndef __GLM_MAT4__
-#    define __GLM_MAT4__
+#ifndef __LA_MAT4__
+#    define __LA_MAT4__
 
 float *identityMatrix(void)
 {
@@ -82,5 +82,7 @@ float *perspectiveMatrix(/*...*/)
 
 	return matrix;
 }
+
+//...
 
 #endif
