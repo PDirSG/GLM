@@ -1,5 +1,5 @@
 #ifndef math_H
-#	define math_H
+#   define math_H
 
 #   include <math.h>
 
