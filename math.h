@@ -12,12 +12,12 @@ float *_Allocate(int columnSize, int rowSize)
 }
 
 float *_VEC4
-			(
-			float A,
-			float B,
-			float C,
-			float D
-			)
+	   (
+ 	   float A,
+	   float B,
+   	   float C,
+	   float D
+	   )
 {
 	float *vector = _Allocate(1, 4);
 	
@@ -30,11 +30,11 @@ float *_VEC4
 }
 
 float *_VEC3
-			(
-			float A,
-			float B,
-			float C
-			)
+	   (
+	   float A,
+   	   float B,
+	   float C
+	   )
 {
 	float *vector = _Allocate(1, 3);
 	
@@ -46,10 +46,10 @@ float *_VEC3
 }
 
 float *_VEC2
-			(
-			float A,
-			float B
-			)
+	   (
+	   float A,
+	   float B
+	   )
 {
 	float *vector = _Allocate(1, 2);
 	
@@ -60,12 +60,12 @@ float *_VEC2
 }
 
 float *_MAT4
-			(
-			float A, float B, float C, float D,
-			float E, float F, float G, float H,
-			float I, float J, float K, float L,
-			float M, float N, float O, float P
-			)
+	   (
+	   float A, float B, float C, float D,
+           float E, float F, float G, float H,
+	   float I, float J, float K, float L,
+           float M, float N, float O, float P
+           )
 {
 	float *matrix = _Allocate(4, 4);
 	
@@ -100,10 +100,10 @@ float *subtraction(float *A, float *B, int columnSize, int rowSize)
 
 
 float *multiplication
-					(
-					float *A, int columnSize1, int rowSize1, 
-					float *B, int columnSize2, int rowSize2
-					)
+	  	    (
+		    float *A, int columnSize1, int rowSize1, 
+	  	    float *B, int columnSize2, int rowSize2
+		    )
 {
 	//...
 }
