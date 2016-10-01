@@ -77,33 +77,24 @@ float *_MAT4
 	return matrix;
 }
 
-float *addition(float *A, float *B, int columnSize, int rowSize)
-{
-	float *C = _Allocate(columnSize, rowSize);
-	
+void addition(float *result, float *A, float *B, int columnSize, int rowSize)
+{	
 	for(int I = 0; I < (columnSize * rowSize); I++)
-		C[I] = A[I] + B[I];
-	
-	return C;
+		result[I] = A[I] + B[I];
 }
 
-float *subtraction(float *A, float *B, int columnSize, int rowSize)
-{
-	float *C = _Allocate(columnSize, rowSize);
-	
+void subtraction(float *result, float *A, float *B, int columnSize, int rowSize)
+{	
 	for(int I = 0; I < (columnSize * rowSize); I++)
-		C[I] = A[I] - B[I];
-	
-	return C;
+		result[I] = A[I] - B[I];
 }
 
 
-
-float *multiplication
-	  	    (
-		    float *A, int columnSize1, int rowSize1, 
-	  	    float *B, int columnSize2, int rowSize2
-		    )
+void multiplication(
+		   float *result,
+  		   float *A, int columnSize1, int rowSize1, 
+		   float *B, int columnSize2, int rowSize2
+		  )
 {
 	//...
 }
