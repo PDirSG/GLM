@@ -59,6 +59,17 @@ float *_VEC2
 	return vector;
 }
 
+float *_VEC1
+	   (
+	   float A
+	   )
+{
+	float *vector = _Allocate(1, 1);
+	
+	vector[0] = A;
+	return vector;
+}
+
 float *_MAT4
 	   (
 	   float A, float B, float C, float D,
@@ -75,28 +86,6 @@ float *_MAT4
 	matrix[12] = M; matrix[13] = N; matrix[14] = O; matrix[15] = P;	
 
 	return matrix;
-}
-
-void addition(float *result, float *A, float *B, int columnSize, int rowSize)
-{	
-	for(int I = 0; I < (columnSize * rowSize); I++)
-		result[I] = A[I] + B[I];
-}
-
-void subtraction(float *result, float *A, float *B, int columnSize, int rowSize)
-{	
-	for(int I = 0; I < (columnSize * rowSize); I++)
-		result[I] = A[I] - B[I];
-}
-
-
-void multiplication(
-		   float *result,
-  		   float *A, int columnSize1, int rowSize1, 
-		   float *B, int columnSize2, int rowSize2
-		  )
-{
-	//...
 }
 
 #	include "math.c"
