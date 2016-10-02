@@ -1,6 +1,6 @@
 //I will put some stuff for vector operations to here soon.
 
-void _MultiplyMatrix //"Hardcoded"
+void _MultiplyMatrix
 		   (
 		   float *A,
 		   float *B
@@ -152,4 +152,12 @@ void _ScaleMatrix(float *A, float X, float Y, float Z)
 	_Free(temporary);
 }
 
-//I will add some stuff for projection matrices to here soon.
+void _OrthographicMatrix(float *A, /*...*/)
+{
+	//...	
+}
+
+void _PerspectiveMatrix(float *A, /*...*/)
+{
+	//...	
+}
