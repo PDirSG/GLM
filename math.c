@@ -1,10 +1,10 @@
-//Some stuff for vector operations...
+//I will put some stuff for vector operations to here at future.
 
-void _MultiplyMatrix
-				   (
-				   float *A,
-				   float *B
-				   )
+void _MultiplyMatrix //"Hardcoded"
+		   (
+		   float *A,
+		   float *B
+		   )
 {	
 	float *temporary = _Allocate(4, 4);
 
@@ -37,25 +37,25 @@ void _MultiplyMatrix
 void _IdentityMatrix(float *A)
 {
 	_MAT4
-		(
+	(
 		A,
 		1, 0, 0, 0,
 		0, 1, 0, 0,
 		0, 0, 1, 0,
 		0, 0, 0, 1
-		);
+	);
 }
 
 void _TransposeMatrix(float *A, float X, float Y, float Z)
 {
 	_MAT4
-		(
+	(
 		A,
 		1, 0, 0, X,
 		0, 1, 0, Y,
 		0, 0, 1, Z,
 		0, 0, 0, 1
-		);
+	);
 }
 
 void _TranslateMatrix(float *A, float X, float Y, float Z)
@@ -71,36 +71,36 @@ void _TranslateMatrix(float *A, float X, float Y, float Z)
 void _RotationMatrixX(float *A, float angle)
 {
 	_MAT4
-		(
+	(
 		A,
 		1, 			 0,  		  0, 0,
 		0, +cos(angle), -sin(angle), 0,
 		0, +sin(angle), +cos(angle), 0,
 		0, 			 0, 		  0, 1
-		);
+	);
 }
 
 void _RotationMatrixY(float *A, float angle)
 {
 	_MAT4
-		(
+	(
 		A,
 		+cos(angle), 0, +sin(angle), 0,
 				  0, 1,			  0, 0,
 		-sin(angle), 0, +cos(angle), 0,
 				  0, 0,			  0, 1
-		);
+	);
 }
 void _RotationMatrixZ(float *A, float angle)
 {
 	_MAT4
-		(
+	(
 		A,
 		+cos(angle), -sin(angle), 0, 0,
 		+sin(angle), +cos(angle), 0, 0,
 				  0,		   0, 1, 0,
 				  0,		   0, 0, 1
-		);
+	);
 }
 
 typedef enum
@@ -134,13 +134,13 @@ void _RotateMatrix(float *A, float angle, Axises axis)
 void _ScalingMatrix(float *A, float X, float Y, float Z)
 {
 	_MAT4
-		(
+	(
 		A,
 		X, 0, 0, 0,
 		0, Y, 0, 0,
 		0, 0, Z, 0,
 		0, 0, 0, 1
-		);
+	);
 }
 
 void _ScaleMatrix(float *A, float X, float Y, float Z)
