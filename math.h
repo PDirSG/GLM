@@ -9,47 +9,7 @@
 #	define _Allocate(columnSize, rowSize) (float *) malloc((columnSize * rowSize) * sizeof(float))
 #	define _Free(memoryBlock) free(memoryBlock)
 
-void _VEC4
-	(
-		 float *vector,
-			
-		 float A,
-		 float B,
-		 float C,
-		 float D
-	)
-{	
-	vector[0] = A;
-	vector[1] = B;
-	vector[2] = C;
-	vector[3] = D;
-}
-
-void _VEC3
-	 (
-		 float *vector,
-			
-		 float A,
-		 float B,
-		 float C
-	 )
-{	
-	vector[0] = A;
-	vector[1] = B;
-	vector[2] = C;
-}
-
-void _VEC2
-	 (
-		 float *vector,
-
-		 float A,
-		 float B
-	 )
-{	
-	vector[0] = A;
-	vector[1] = B;
-}
+//...
 
 void _MAT4
 	 (
