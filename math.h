@@ -1,7 +1,7 @@
 #ifndef math_H
 #	define math_H
 
-#   include <math.h>
+#       include <math.h>
 
 #	define degreesToRadians(degrees) degrees * (M_PI / 180)
 #	define radiansToDegrees(radians) radians * (180 / M_PI)
@@ -10,14 +10,14 @@
 #	define _Free(memoryBlock) free(memoryBlock)
 
 void _VEC4
-		 (
+	(
 		 float *vector,
 			
 		 float A,
 		 float B,
 		 float C,
 		 float D
-		 )
+	)
 {	
 	vector[0] = A;
 	vector[1] = B;
@@ -26,13 +26,13 @@ void _VEC4
 }
 
 void _VEC3
-		 (
+	 (
 		 float *vector,
 			
 		 float A,
 		 float B,
 		 float C
-		 )
+	 )
 {	
 	vector[0] = A;
 	vector[1] = B;
@@ -40,26 +40,26 @@ void _VEC3
 }
 
 void _VEC2
-		 (
+	 (
 		 float *vector,
 
 		 float A,
 		 float B
-		 )
+	 )
 {	
 	vector[0] = A;
 	vector[1] = B;
 }
 
 void _MAT4
-		 (
+	 (
 		 float *matrix,
 			
 		 float A, float B, float C, float D,
 		 float E, float F, float G, float H,
 		 float I, float J, float K, float L,
 		 float M, float N, float O, float P
-		 )
+	 )
 {	
 	matrix[ 0] = A; matrix[ 1] = B; matrix[ 2] = C; matrix[ 3] = D;
 	matrix[ 4] = E; matrix[ 5] = F; matrix[ 6] = G; matrix[ 7] = H;
