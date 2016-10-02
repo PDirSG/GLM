@@ -151,3 +151,5 @@ void _ScaleMatrix(float *A, float X, float Y, float Z)
 	_MultiplyMatrix(A, temporary);
 	_Free(temporary);
 }
+
+//I will add some stuff for projection matrices to here soon.
