@@ -1,4 +1,4 @@
-//I will put some stuff for vector operations to here at future.
+//I will put some stuff for vector operations to here soon.
 
 void _MultiplyMatrix //"Hardcoded"
 		   (
