@@ -9,7 +9,7 @@
 #	define _Allocate(columnSize, rowSize) (float *) malloc((columnSize * rowSize) * sizeof(float))
 #	define _Free(memoryBlock) free(memoryBlock)
 
-//...
+//I will put some stuff for vector operations to here soon.
 
 void _MAT4
 	 (
