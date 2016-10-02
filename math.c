@@ -73,10 +73,10 @@ void _RotationMatrixX(float *A, float angle)
 	_MAT4
 	(
 		A,
-		1, 			 0,  		  0, 0,
+		1,  	     0,           0, 0,
 		0, +cos(angle), -sin(angle), 0,
 		0, +sin(angle), +cos(angle), 0,
-		0, 			 0, 		  0, 1
+		0,           0,           0, 1
 	);
 }
 
@@ -86,9 +86,9 @@ void _RotationMatrixY(float *A, float angle)
 	(
 		A,
 		+cos(angle), 0, +sin(angle), 0,
-				  0, 1,			  0, 0,
+			  0, 1,	 	  0, 0,
 		-sin(angle), 0, +cos(angle), 0,
-				  0, 0,			  0, 1
+			  0, 0,		  0, 1
 	);
 }
 void _RotationMatrixZ(float *A, float angle)
@@ -98,8 +98,8 @@ void _RotationMatrixZ(float *A, float angle)
 		A,
 		+cos(angle), -sin(angle), 0, 0,
 		+sin(angle), +cos(angle), 0, 0,
-				  0,		   0, 1, 0,
-				  0,		   0, 0, 1
+			  0,	       0, 1, 0,
+		  	  0,	       0, 0, 1
 	);
 }
 
