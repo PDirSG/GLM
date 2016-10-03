@@ -61,7 +61,6 @@ void _TranslateMatrix(float *A, float X, float Y, float Z)
      float temporary[4 * 4];
     _TransposeMatrix(temporary, X,Y,Z);
 
-
     _MultiplyMatrix(A, temporary);
 }
 
