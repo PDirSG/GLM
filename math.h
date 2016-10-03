@@ -6,7 +6,7 @@
 #       include <math.h>
 
 //This macro declerations are not used in the source code of this library. You can freely remove them. They are
-//only for making more easier things for programmers.
+//only in here for making more easier things for programmers.
 #	define degreesToRadians(degrees) degrees * (M_PI / 180)
 #	define radiansToDegrees(radians) radians * (180 / M_PI)
 
