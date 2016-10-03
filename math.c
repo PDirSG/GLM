@@ -1,6 +1,6 @@
 //I will put some stuff for vector operations to here soon.
 
-void _MultiplyMatrix
+void _MultiplyMatrix //It is a little bit hardcoded. But useful...
 		   (
 		   float *A,
 		   float *B
@@ -32,7 +32,7 @@ void _MultiplyMatrix
 		A[I] = temporary[I];
 }
 
-void _IdentityMatrix(float *A)
+void _IdentityMatrix(float *A) 
 {
 	_MAT4
 	(
@@ -100,7 +100,7 @@ void _RotationMatrixZ(float *A, float angle)
 	);
 }
 
-typedef enum
+typedef enum //More useful than using macro declerations in this status.
 {
 	_X_Axis,
 	_Y_Axis,
