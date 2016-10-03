@@ -1,11 +1,17 @@
 #ifndef math_H
 #	define math_H
 
+//Well, i will not declare mathematical functions again like what GLM does. Most of the functions in this library
+//are uses hardware dependent functionality, so you can't except your own mathematical functions are more faster.
 #       include <math.h>
 
+//This macro declerations are not used in the source code of this library. You can freely remove them. They are
+//only for making more easier things for programmers.
 #	define degreesToRadians(degrees) degrees * (M_PI / 180)
 #	define radiansToDegrees(radians) radians * (180 / M_PI)
 
+//Actually  you can just use an float array but i thing allocating the memory when we need, and releasing
+//the memory when we do not need anymore is the best.
 #	define _Allocate(columnSize, rowSize) (float *) malloc((columnSize * rowSize) * sizeof(float))
 #	define _Free(memoryBlock) free(memoryBlock)
 
