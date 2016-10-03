@@ -6,7 +6,7 @@ void _MultiplyMatrix
 		   float *B
 		   )
 {	
-	float *temporary = _Allocate(4, 4);
+	float temporary[4 * 4];
 
 	temporary[ 0] = A[ 0] * B[ 0] + A[ 1] * B[ 4] + A[ 2] * B[ 8] + A[ 3] * B[12];
 	temporary[ 1] = A[ 0] * B[ 1] + A[ 1] * B[ 5] + A[ 2] * B[ 9] + A[ 3] * B[13];
@@ -30,8 +30,6 @@ void _MultiplyMatrix
 
 	for(int I = 0; I < 4 * 4; I++)
 		A[I] = temporary[I];
-		
-	_Free(temporary);
 }
 
 void _IdentityMatrix(float *A)
@@ -60,12 +58,11 @@ void _TransposeMatrix(float *A, float X, float Y, float Z)
 
 void _TranslateMatrix(float *A, float X, float Y, float Z)
 {
-	float *temporary = _Allocate(4, 4);
-	_TransposeMatrix(temporary, X,Y,Z);
+     float temporary[4 * 4];
+    _TransposeMatrix(temporary, X,Y,Z);
 
 
-        _MultiplyMatrix(A, temporary);
-        _Free(temporary);
+    _MultiplyMatrix(A, temporary);
 }
 
 void _RotationMatrixX(float *A, float angle)
@@ -112,7 +109,7 @@ typedef enum
 
 void _RotateMatrix(float *A, float angle, Axises axis)
 {
-	float *temporary = _Allocate(4, 4);
+	float temporary[4 * 4];
 	
 	switch(axis)
 	{
@@ -128,7 +125,6 @@ void _RotateMatrix(float *A, float angle, Axises axis)
 	}
 	
 	_MultiplyMatrix(A, temporary);
-	_Free(temporary);
 }
 
 void _ScalingMatrix(float *A, float X, float Y, float Z)
@@ -145,19 +141,18 @@ void _ScalingMatrix(float *A, float X, float Y, float Z)
 
 void _ScaleMatrix(float *A, float X, float Y, float Z)
 {
-	float *temporary = _Allocate(4, 4);
+	 float temporary[4 * 4];
 	_ScalingMatrix(temporary, X, Y, Z);
 
 	_MultiplyMatrix(A, temporary);
-	_Free(temporary);
 }
 
-void _OrthographicMatrix(float *A, /*...*/)
+void _OrthographicMatrix(float *A/*, ...*/)
 {
-	//...	
+	
 }
 
-void _PerspectiveMatrix(float *A, /*...*/)
+void _PerspectiveMatrix(float *A/*, ...*/)
 {
-	//...	
+	
 }
