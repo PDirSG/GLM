@@ -10,10 +10,14 @@
 #	define degreesToRadians(degrees) degrees * (M_PI / 180)
 #	define radiansToDegrees(radians) radians * (180 / M_PI)
 
-//Actually  you can just use an float array but i thing allocating the memory when we need, and releasing
-//the memory when we do not need anymore is the best.
+//It is for not force the C++ developers to including stdlib.h header file.
+#if defined(__cplusplus)
+#	define _Allocate(columnSize, rowSize) new float[columnSize * rowSize]
+#	define _Free(memoryBlcok) delete memoryBlock
+#else
 #	define _Allocate(columnSize, rowSize) (float *) malloc((columnSize * rowSize) * sizeof(float))
 #	define _Free(memoryBlock) free(memoryBlock)
+#endif
 
 //I will put some stuff for vector operations to here soon.
 
